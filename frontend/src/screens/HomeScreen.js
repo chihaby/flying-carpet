@@ -9,8 +9,8 @@ import { listProducts } from "../actions/productActions";
 const HomeScreen = () => {
   const dispatch = useDispatch();
 
-  // productList same name from store
   const productList = useSelector((state) => state.productList);
+
   const { loading, error, products } = productList;
 
   useEffect(() => {
