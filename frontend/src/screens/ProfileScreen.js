@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Table, Form, Button, Row, Col } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
@@ -111,7 +112,7 @@ const ProfileScreen = ({ location, history }) => {
         {loadingOrders ? (
           <Loader />
         ) : errorOrders ? (
-          <Message variant='danger'>{errorOrderes}</Message>
+          <Message variant='danger'>{errorOrders}</Message>
         ) : (
           <Table striped bordered hover responsive className='table-sm'>
             <thead>
@@ -121,8 +122,39 @@ const ProfileScreen = ({ location, history }) => {
                 <th>TOTAL</th>
                 <th>PAID</th>
                 <th>DELIVERED</th>
+                <th></th>
               </tr>
             </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order._createdAt}</td>
+                  <td>{order._totalPrice}</td>
+                  <td>
+                    {order._isPaid ? (
+                      order.deliveredAt.substring(0, 10)
+                    ) : (
+                      <i className='fas fa-times' style={{ color: 'red' }}></i>
+                    )}
+                  </td>
+                  <td>
+                    {order._isDelivered ? (
+                      order.paidAt.substring(0, 10)
+                    ) : (
+                      <i className='fas fa-times' style={{ color: 'red' }}></i>
+                    )}
+                  </td>
+                  <td>
+                    <LinkContainer to={`/order/${order._id}`}>
+                      <Button className='btn-sm' variant='light'>
+                        Details
+                      </Button>
+                    </LinkContainer>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </Table>
         )}
       </Col>
