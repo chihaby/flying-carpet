@@ -145,7 +145,7 @@ export const shippingOrder = (order) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `/api/orders/${order._id}/shipping`,
+      `/api/orders/${order._id}/shipped`,
       {},
       config
     );
