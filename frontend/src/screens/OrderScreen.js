@@ -209,15 +209,18 @@ const OrderScreen = ({ match, history }) => {
                 </ListGroup.Item>
               )}
               {loadingShipping && <Loader />}
-              {userInfo.isAdmin && order.isPaid && !order.isShipped && (
-                <Button
-                  type='button'
-                  className='btn btn-block'
-                  onClick={shippingHandler}
-                >
-                  Mark As Shipped
-                </Button>
-              )}
+              {userInfo &&
+                userInfo.isAdmin &&
+                order.isPaid &&
+                !order.isShipped && (
+                  <Button
+                    type='button'
+                    className='btn btn-block'
+                    onClick={shippingHandler}
+                  >
+                    Mark As Shipped
+                  </Button>
+                )}
             </ListGroup>
           </Card>
         </Col>
