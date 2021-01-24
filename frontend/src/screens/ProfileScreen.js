@@ -121,7 +121,7 @@ const ProfileScreen = ({ location, history }) => {
                 <th>DATE</th>
                 <th>TOTAL</th>
                 <th>PAID</th>
-                <th>DELIVERED</th>
+                <th>SHIPPED</th>
                 <th></th>
               </tr>
             </thead>
@@ -133,13 +133,13 @@ const ProfileScreen = ({ location, history }) => {
                   <td>{order._totalPrice}</td>
                   <td>
                     {order._isPaid ? (
-                      order.deliveredAt.substring(0, 10)
+                      order.shippedAt.substring(0, 10)
                     ) : (
                       <i className='fas fa-times' style={{ color: 'red' }}></i>
                     )}
                   </td>
                   <td>
-                    {order._isDelivered ? (
+                    {order._isShipped ? (
                       order.paidAt.substring(0, 10)
                     ) : (
                       <i className='fas fa-times' style={{ color: 'red' }}></i>
