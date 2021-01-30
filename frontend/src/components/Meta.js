@@ -12,10 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: 'Welcome to Moroccan Prince',
-  description: 'We sell the beautiful handmade Moroccan rugs',
-  keywords:
-    'handmade rugs, moroccan rugs, berber rugs, beni ourain, beni mrirt',
+  title: 'Maharat Kids',
+  description: 'Kids Online Learning Center',
+  keywords: 'online courses, tutorial, kids, french, learning, english',
 };
 
 export default Meta;
