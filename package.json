@@ -1,7 +1,7 @@
 {
   "name": "proshop",
   "version": "1.0.0",
-  "description": "MERN shopping app",
+  "description": "Kids french online learning platform",
   "main": "server.js",
   "type": "module",
   "scripts": {

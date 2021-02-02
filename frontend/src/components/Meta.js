@@ -13,7 +13,7 @@ const Meta = ({ title, description, keywords }) => {
 
 Meta.defaultProps = {
   title: 'Maharat Kids',
-  description: 'Kids Online Learning Center',
+  description: 'Kids French Online Learning Center',
   keywords: 'online courses, tutorial, kids, french, learning, english',
 };
 
