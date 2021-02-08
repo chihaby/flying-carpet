@@ -1,7 +1,0 @@
-delete node modules and run npm install
-
-user: rad@mail.com
-pw: rad
-
-user: admin@example.com
-pw: 123456
