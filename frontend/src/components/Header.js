@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import SearchBox from './SearchBox';
 import { logout } from '../actions/userActions';
-import logo from '../assets/maharat-kids.png';
+//import logo from '../assets/maharat-kids.png';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -21,13 +21,13 @@ const Header = () => {
     <header>
       <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          <LinkContainer to='/'>
+          {/* <LinkContainer to='/'>
             <Navbar.Brand>
               <img src={logo} alt='maharat kids' style={{ height: '60px' }} />
             </Navbar.Brand>
-          </LinkContainer>
+          </LinkContainer> */}
           <LinkContainer to='/'>
-            <Navbar.Brand>Maharat kids</Navbar.Brand>
+            <Navbar.Brand>Flying Carpet</Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls='basic-navbar-nav' />

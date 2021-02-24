@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: 'Maharat Kids',
-  description: 'Kids French Online Learning Center',
-  keywords: 'online courses, tutorial, kids, french, learning, english',
+  title: 'Flying Carpet',
+  description: 'Online Store for hand made moroccan rugs',
+  keywords: 'online rug store, hand made, moroccan rugs, beni ourain',
 };
 
 export default Meta;

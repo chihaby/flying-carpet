@@ -1,0 +1,7 @@
+// admin login
+email: admin@mail.com
+password: 123456
+
+// user login
+email: rad@mail.com
+password: rad
